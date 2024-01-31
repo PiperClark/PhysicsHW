@@ -1,14 +1,28 @@
-public class Circle {
-    public Circle(Point center, double radius) {
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.physicsengine;
 
+/**
+ *
+ * @author User
+ */
+public class Circle {
+    
+    public Circle(Point center, double radius) {
+        this.center = center;
+        this.radiusDoub = radius;
     }
 
     public Point getCenter() {
-        throw new UnsupportedOperationException("Point::getCenter needs to be implemented");
+        return center;
+        // throw new UnsupportedOperationException("Point::getCenter needs to be implemented");
     }
 
     public double getRadius() {
-        throw new UnsupportedOperationException("Point::getRadius needs to be implemented");
+        return radiusDoub;
+        // throw new UnsupportedOperationException("Point::getRadius needs to be implemented");
     }
 
     /**
@@ -46,4 +60,7 @@ public class Circle {
         Vector line = c.getCenter().calcVectorTo(this.getCenter());
         return line.scale(1/ line.length());
     }
+    
+    private Point center;
+    private double radiusDoub;
 }
