@@ -12,15 +12,20 @@ public abstract class Shape {
     public Shape(Point location) {
         this.location = location;
     }
-
-    public abstract void getEdge();
-    
-    public abstract boolean encloses(Point p);
-    public abstract boolean collidesWith(Shape s);
-
-    public Point getLocation() {
+    public Point getCenter(){
         return location;
     }
+    public abstract double getRadius();
+
+    //public abstract void getEdge();
+    
+    
+    public  boolean collidesWith(Shape s) {
+        
+    }
+
+    public abstract boolean encloses(Point p);
+    
 
     private Point location;
 }
